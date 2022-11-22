@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <header></header>
+        <main></main>
+        <script>
+            //1 create an array of strings (has to be of at least length 10)
+            let flowers = ["rose", "lily", "tulip", "orchid", "daisy", "carnation", "hyacinth", "chrysanthemum", "daffodil", "sunflower"];
+
+            //2 print out the second element in the array
+            console.log(flowers[1]);
+
+            //3 print out the length of the array
+            console.log(flowers.length);
+
+            //4 iterate over the array and print out each element
+            for(item of flowers){
+                console.log(item)
+            }
+            
+            //5 create a function that takes in a string and in the function iterate over each element in the array and for each element check if its equal to the parameter
+            // if it is then return that string
+            //else continue
+            function check(){
+                for(item of flowers){
+                    if (item == "orchid") {
+                        console.log("orchid")
+                    } else {
+                        console.log("continue")}
+                }
+            }
+            check();
+
+            //6 remove the last element from the array and then console.log the array
+            flowers.pop();
+            console.log(flowers);
+            
+            //7 remove the first element from the array and then console.log the array
+            flowers.shift();
+            console.log(flowers);
+
+            //8 add a string to the end of the array and then console.log the array
+            flowers.push("poppy");
+            console.log(flowers);
+
+            // add a string to the beginning of the array and then console.log the array
+            flowers.unshift("hydrangea");
+            console.log(flowers);
+
+            //8 create another array of 6 veggies 
+                //create a variable called twoVeggies and set it equal to slicing the veggies array and getting the middle two elements
+                //ex [1, 3, 4, 5, 7, 8] and getting the two middle elements would be [4, 5]
+            let veggies = ["spinach", "carrot", "broccoli", "kale", "peas", "cucumber"];
+            let twoVeggies = veggies.slice(2, 4);
+            console.log(twoVeggies);
+
+            //9 create another array of 4 fruits
+                //create a fruits and veggies array and assign it to concatinating the veggies array above and the fruits array
+            let fruits = ["strawberry", "grape", "watermelon", "apple"];
+            let fruitsAndveggies = fruits.concat(veggies);
+            console.log(fruitsAndveggies);
+
+            //10 get the index of one the fruits or veggies in your fruitsAndveggies array
+            console.log(fruitsAndveggies.indexOf("watermelon"));
+        </script>
+    </body>
+</html>
